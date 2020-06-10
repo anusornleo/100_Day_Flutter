@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class Day_1 extends StatefulWidget {
+class Day1 extends StatefulWidget {
   @override
-  _Day_1State createState() => _Day_1State();
+  _Day1State createState() => _Day1State();
 }
 
-class _Day_1State extends State<Day_1> {
+class _Day1State extends State<Day1> {
   List<String> listImage = [
     'assets/JPEG/cat1.jpg',
     'assets/JPEG/cat2.jpg',

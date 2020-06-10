@@ -2,22 +2,21 @@ import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
 
-  List<String> listDay = ["1"];
+  final List<String> listDay = ["1", "2"];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text("100 Day of flutter by Leo"),
-        elevation: 0,
-      ),
-      body: ListView(
-        children: <Widget>[
-          Container(
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text("100 Day of flutter by Leo"),
+          elevation: 0,
+        ),
+        body: ListView.separated(itemBuilder: (context, index) {
+          return Container(
             child: GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, '/${listDay[0]}');
+                Navigator.pushNamed(context, '/${listDay[index]}');
               },
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -33,19 +32,26 @@ class Home extends StatelessWidget {
                           offset: Offset(0, 3),
                         )
                       ]),
-                  child: Center(
-                    child: Text(
-                      "Day 1",
-                      style: TextStyle(fontSize: 22),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 28),
+                      child: Text(
+                        "Day ${listDay[index]}",
+                        style: TextStyle(fontSize: 22),
+                      ),
                     ),
                   ),
                   height: 80,
                 ),
               ),
             ),
-          )
-        ],
-      ),
+          );
+        }, separatorBuilder: (context, index) {
+          return SizedBox(
+            width: 10,
+          );
+        }, itemCount: listDay.length)
     );
   }
 }

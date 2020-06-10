@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterui100day/File100Day/Day_1.dart';
+import 'package:flutterui100day/File100Day/Day_2.dart';
 import 'package:flutterui100day/Pages/Home.dart';
 
 void main() {
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: '100 Day',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: "Rubik",
         primarySwatch: Colors.teal,
@@ -22,7 +24,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => Home(),
-        '/1': (context) => Day_1(),
+        '/1': (context) => Day1(),
+        '/2': (context) => Day2(),
       },
     );
   }
