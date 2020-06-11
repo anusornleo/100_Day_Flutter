@@ -83,103 +83,106 @@ class _Day4State extends State<Day4> {
                 )),
             SliverList(
               delegate: SliverChildListDelegate([
-                Padding(
-                  padding:
-                      const EdgeInsets.only(left: 16, right: 16, top: 16),
-                  child: DefaultTextStyle(
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 20),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        FadeAnimation(
-                          isX: true,
-                          delay: 200,
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 34),
-                            child: Text(
-                              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-                              style: TextStyle(
-                                  color: Colors.white.withOpacity(.5),
-                                  fontSize: 17),
+                Container(
+                  color: Colors.black,
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.only(left: 16, right: 16, top: 16),
+                    child: DefaultTextStyle(
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 20),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          FadeAnimation(
+                            isX: true,
+                            delay: 200,
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 34),
+                              child: Text(
+                                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+                                style: TextStyle(
+                                    color: Colors.white.withOpacity(.5),
+                                    fontSize: 17),
+                              ),
                             ),
                           ),
-                        ),
-                        FadeAnimation(
-                            isX: true, delay: 300, child: Text("Born")),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 16),
-                          child: Text("10 June 2017",
-                              style: TextStyle(
-                                  color: Colors.white.withOpacity(.5),
-                                  fontSize: 17)),
-                        ),
-                        SizedBox(
-                          height: 18,
-                        ),
-                        Text("Breeds"),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 16),
-                          child: Text("Persian",
-                              style: TextStyle(
-                                  color: Colors.white.withOpacity(.5),
-                                  fontSize: 17)),
-                        ),
-                        SizedBox(
-                          height: 18,
-                        ),
-                        Text("His Friends"),
-                        Container(
-                          margin: EdgeInsets.only(top: 16),
-                          height: 200,
-                          child: ListView.separated(
-                              scrollDirection: Axis.horizontal,
-                              itemBuilder: (context, index) {
-                                return AspectRatio(
-                                  aspectRatio: 2 / 3,
-                                  child: Stack(
-                                    children: <Widget>[
-                                      Container(
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(16),
-                                            image: DecorationImage(
-                                                image: AssetImage(
-                                                    listFriend[index]["pic"]),
-                                                fit: BoxFit.cover)),
-                                        child: Container(
+                          FadeAnimation(
+                              isX: true, delay: 300, child: Text("Born")),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 16),
+                            child: Text("10 June 2017",
+                                style: TextStyle(
+                                    color: Colors.white.withOpacity(.5),
+                                    fontSize: 17)),
+                          ),
+                          SizedBox(
+                            height: 18,
+                          ),
+                          Text("Breeds"),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 16),
+                            child: Text("Persian",
+                                style: TextStyle(
+                                    color: Colors.white.withOpacity(.5),
+                                    fontSize: 17)),
+                          ),
+                          SizedBox(
+                            height: 18,
+                          ),
+                          Text("His Friends"),
+                          Container(
+                            margin: EdgeInsets.only(top: 16),
+                            height: 200,
+                            child: ListView.separated(
+                                scrollDirection: Axis.horizontal,
+                                itemBuilder: (context, index) {
+                                  return AspectRatio(
+                                    aspectRatio: 2 / 3,
+                                    child: Stack(
+                                      children: <Widget>[
+                                        Container(
                                           decoration: BoxDecoration(
-                                              gradient:
-                                                  LinearGradient(colors: [
-                                            Colors.black,
-                                            Colors.transparent
-                                          ], begin: Alignment.bottomRight)),
+                                              borderRadius:
+                                                  BorderRadius.circular(16),
+                                              image: DecorationImage(
+                                                  image: AssetImage(
+                                                      listFriend[index]["pic"]),
+                                                  fit: BoxFit.cover)),
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                                gradient:
+                                                    LinearGradient(colors: [
+                                              Colors.black,
+                                              Colors.transparent
+                                            ], begin: Alignment.bottomRight)),
+                                          ),
                                         ),
-                                      ),
-                                      Align(
-                                        alignment: Alignment(0, 0.8),
-                                        child: Text(
-                                          listFriend[index]["name"],
-                                          style: TextStyle(fontSize: 18),
+                                        Align(
+                                          alignment: Alignment(0, 0.8),
+                                          child: Text(
+                                            listFriend[index]["name"],
+                                            style: TextStyle(fontSize: 18),
+                                          ),
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                );
-                              },
-                              separatorBuilder: (context, index) {
-                                return SizedBox(
-                                  width: 16,
-                                );
-                              },
-                              itemCount: listFriend.length),
-                        ),
-                        SizedBox(
-                          height: 95,
-                        )
-                      ],
+                                      ],
+                                    ),
+                                  );
+                                },
+                                separatorBuilder: (context, index) {
+                                  return SizedBox(
+                                    width: 16,
+                                  );
+                                },
+                                itemCount: listFriend.length),
+                          ),
+                          SizedBox(
+                            height: 95,
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 )
