@@ -4,6 +4,8 @@ import 'package:flutterui100day/File100Day/Day_2/Day_2.dart';
 import 'package:flutterui100day/File100Day/Day_3/StartPage.dart';
 import 'package:flutterui100day/Pages/Home.dart';
 
+import 'File100Day/Day_4/Day4.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -28,6 +30,7 @@ class MyApp extends StatelessWidget {
         '/1': (context) => Day1(),
         '/2': (context) => Day2(),
         '/3': (context) => Day3(),
+        '/4': (context) => Day4(),
       },
     );
   }
