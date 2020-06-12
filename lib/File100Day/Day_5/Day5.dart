@@ -96,7 +96,7 @@ class _Day5State extends State<Day5> {
                                       color: Colors.grey[300],
                                       borderRadius: BorderRadius.circular(20)),
                                   child: Center(
-                                    child: Text(distance),
+                                    child: Text(distance+" km."),
                                   ),
                                 ),
                               ),
