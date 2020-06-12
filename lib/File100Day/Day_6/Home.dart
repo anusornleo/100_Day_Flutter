@@ -126,35 +126,38 @@ class _Day6State extends State<Day6> with TickerProviderStateMixin {
                     child: ScaleTransition(
                       scale: _animation,
                       child: Animator<double>(
-                        duration: Duration(seconds: 1),
-                        tween: Tween<double>(begin: 6.0, end: 17.0),
-                        cycles: 0,
-                        builder:(context,animation,child) {
-                          return Container(
-                            padding: EdgeInsets.all(animation.value),
-                            width: 80,
-                            height: 80,
-                            decoration: BoxDecoration(
-                                color: Colors.amber.withOpacity(0.5),
-                                shape: BoxShape.circle),
-                            child: GestureDetector(
-                              onTap: () {
-                                _animationController.forward().then((value) =>
-                                    Navigator.push(
+                          curve: Curves.easeInOut,
+                          duration: Duration(milliseconds: 1200),
+                          tween: Tween<double>(begin: 6.0, end: 17.0),
+                          cycles: 0,
+                          builder: (context, animation, child) {
+                            return Container(
+                              padding: EdgeInsets.all(animation.value),
+                              width: 80,
+                              height: 80,
+                              decoration: BoxDecoration(
+                                  color: Colors.amber.withOpacity(0.5),
+                                  shape: BoxShape.circle),
+                              child: GestureDetector(
+                                onTap: () {
+                                  _animationController.forward().then((value) {
+                                    return Navigator.push(
                                         context,
                                         PageTransition(
                                             type: PageTransitionType.fade,
-                                            duration: Duration(milliseconds: 500),
-                                            child: Dashboard())));
-                              },
-                              child: Container(
-                                decoration: BoxDecoration(
-                                    color: Colors.amber, shape: BoxShape.circle),
+                                            duration:
+                                                Duration(milliseconds: 500),
+                                            child: Dashboard()));
+                                  });
+                                },
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      color: Colors.amber,
+                                      shape: BoxShape.circle),
+                                ),
                               ),
-                            ),
-                          );
-                        }
-                      ),
+                            );
+                          }),
                     ),
                   )
                 ],
