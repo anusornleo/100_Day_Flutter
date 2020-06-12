@@ -127,7 +127,7 @@ class _Day6State extends State<Day6> with TickerProviderStateMixin {
                       scale: _animation,
                       child: Animator<double>(
                         duration: Duration(seconds: 1),
-                        tween: Tween<double>(begin: 6.0, end: 16.0),
+                        tween: Tween<double>(begin: 6.0, end: 17.0),
                         cycles: 0,
                         builder:(context,animation,child) {
                           return Container(
