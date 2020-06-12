@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
-  final List<String> listDay = ["1", "2", "3", "4", "5", "6", "7"];
+  final List<String> listDay = ["1", "2", "3", "4", "5", "6", "7","8"];
 
   @override
   Widget build(BuildContext context) {
