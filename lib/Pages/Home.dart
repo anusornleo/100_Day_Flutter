@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
-  final List<String> listDay = ["1", "2", "3", "4", "5", "6", "7","8","9"];
+  final List<String> listDay = ["1", "2", "3", "4", "5", "6", "7","8","9","10"];
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,6 @@ class Home extends StatelessWidget {
           elevation: 0,
         ),
         body: ListView.separated(
-            reverse: true,
             itemBuilder: (context, index) {
               return Container(
                 child: GestureDetector(
