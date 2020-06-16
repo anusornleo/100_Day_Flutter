@@ -13,7 +13,8 @@ class Home extends StatelessWidget {
     "9",
     "10",
     "11",
-    "12"
+    "12",
+    "13"
   ];
 
   @override
