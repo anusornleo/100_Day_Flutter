@@ -9,10 +9,10 @@ class Category extends StatefulWidget {
 
 class _CategoryState extends State<Category> {
   List<Map> items = [
-    {"name": "xxx", "price": "100", "pic": "assets/JPEG/cat6.jpg"},
-    {"name": "xxx", "price": "100", "pic": "assets/JPEG/cat1.jpg"},
-    {"name": "xxx", "price": "100", "pic": "assets/JPEG/cat3.jpg"},
-    {"name": "xxx", "price": "100", "pic": "assets/JPEG/cat2.jpg"},
+    {"name": "Tommy", "price": "100", "pic": "assets/JPEG/cat6.jpg"},
+    {"name": "Easy", "price": "100", "pic": "assets/JPEG/cat1.jpg"},
+    {"name": "Lulk", "price": "100", "pic": "assets/JPEG/cat3.jpg"},
+    {"name": "Pony", "price": "100", "pic": "assets/JPEG/cat2.jpg"},
   ];
 
   @override
@@ -182,7 +182,7 @@ class _CategoryState extends State<Category> {
                           style: TextStyle(color: Colors.white, fontSize: 20),
                         ),
                         Text(
-                          "\$$name",
+                          "\$$price",
                           style: TextStyle(color: Colors.white, fontSize: 30),
                         )
                       ],

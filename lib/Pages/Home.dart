@@ -17,7 +17,8 @@ class Home extends StatelessWidget {
     "13",
     "14",
     "15",
-    "16"
+    "16",
+    "18"
   ];
 
   @override
