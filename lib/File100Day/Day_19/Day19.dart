@@ -246,7 +246,6 @@ class _Day19State extends State<Day19> {
 
   Widget post(String profile, String name, String time, String text, String pic,
       String likeCount, bool liked, String commentCount) {
-    print(likeCount);
     return Container(
       margin: EdgeInsets.only(left: 20, right: 20, bottom: 20),
       width: double.infinity,
