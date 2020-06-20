@@ -8,6 +8,7 @@ import 'package:flutterui100day/File100Day/Day_18/Day18.dart';
 import 'package:flutterui100day/File100Day/Day_19/Day19.dart';
 import 'package:flutterui100day/File100Day/Day_2/Day_2.dart';
 import 'package:flutterui100day/File100Day/Day_21/Day21.dart';
+import 'package:flutterui100day/File100Day/Day_22/Day22.dart';
 import 'package:flutterui100day/File100Day/Day_3/StartPage.dart';
 import 'package:flutterui100day/File100Day/Day_5/Day5.dart';
 import 'package:flutterui100day/File100Day/Day_6/Home.dart';
@@ -62,6 +63,7 @@ class MyApp extends StatelessWidget {
         '/19': (context) => Day19(),
         '/20': (context) => Day20(),
         '/21': (context) => Day21(),
+        '/22': (context) => Day22(),
       },
     );
   }

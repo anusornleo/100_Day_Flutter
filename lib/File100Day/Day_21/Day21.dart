@@ -118,7 +118,7 @@ class _Day21State extends State<Day21> {
           return AnimatedContainer(
             width: (_currentPage == _pages.indexOf(e)) ? 30 : 10,
             duration: Duration(milliseconds: 200),
-            margin: EdgeInsets.only(right: 10),
+            margin: EdgeInsets.only(right: (_pages.length -1 == _pages.indexOf(e))?0:10),
             child: Container(
               height: 10,
               decoration: BoxDecoration(

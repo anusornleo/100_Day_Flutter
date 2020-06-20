@@ -116,31 +116,34 @@ class _HomeDay16State extends State<HomeDay16> {
                                     context,
                                     PageTransition(
                                         type: PageTransitionType
-                                            .rightToLeftWithFade,
+                                            .fade,
                                         duration: Duration(milliseconds: 200),
                                         child: Category()));
                               },
-                              child: Container(
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(18),
-                                    image: DecorationImage(
-                                        image:
-                                            AssetImage("assets/JPEG/cat1.jpg"),
-                                        fit: BoxFit.cover)),
+                              child: Hero(
+                                tag:"$i",
                                 child: Container(
-                                  padding: EdgeInsets.all(12),
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(18),
-                                      gradient: LinearGradient(colors: [
-                                        Colors.black87,
-                                        Colors.transparent
-                                      ], begin: Alignment.bottomRight)),
-                                  child: Align(
-                                    alignment: Alignment.bottomLeft,
-                                    child: Text(
-                                      "ddd",
-                                      style: TextStyle(
-                                          fontSize: 18, color: Colors.white),
+                                      image: DecorationImage(
+                                          image:
+                                              AssetImage("assets/JPEG/cat1.jpg"),
+                                          fit: BoxFit.cover)),
+                                  child: Container(
+                                    padding: EdgeInsets.all(12),
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(18),
+                                        gradient: LinearGradient(colors: [
+                                          Colors.black87,
+                                          Colors.transparent
+                                        ], begin: Alignment.bottomRight)),
+                                    child: Align(
+                                      alignment: Alignment.bottomLeft,
+                                      child: Text(
+                                        "ddd",
+                                        style: TextStyle(
+                                            fontSize: 18, color: Colors.white),
+                                      ),
                                     ),
                                   ),
                                 ),
